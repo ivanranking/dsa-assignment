@@ -1,0 +1,50 @@
+class Student:
+    """
+    Parent class representing a student.
+    """
+
+    def __init__(self, name, student_number, university, college, reg_no, id_no):
+        self.name = name
+        self.student_number = student_number
+        self.university = university
+        self.college = college
+        self.reg_no = reg_no
+        self.id_no = id_no
+
+
+class CEDAT_Student(Student):
+    """
+    Class representing a student in the College of Engineering, Design, Art, and Technology (CEDAT).
+    """
+
+    def __init__(self, name, student_number, reg_no, id_no):
+        super().__init__(name, student_number, "Makerere University", "CEDAT", reg_no, id_no)
+
+
+class COCIS_Student(Student):
+    """
+    Class representing a student in the College of Computing and Information Sciences (COCIS).
+    """
+
+    def __init__(self, name, student_number, reg_no, id_no):
+        super().__init__(name, student_number, "Makerere University", "COCIS", reg_no, id_no)
+
+class EASLIS_student(COCIS_student):
+    def_init_(self,name,student_number,reg_no,id_nunmber,college):
+    super()._init_(name,student_number,makeree)
+class EDUC_Student(Student):
+    """
+    Class representing a student in the School of Education (EDUC).
+    """
+
+    def __init__(self, name, student_number, reg_no, id_no):
+        super().__init__(name, student_number, "Makerere University", "EDUC", reg_no, id_no)
+
+
+# Example usage
+cedat_student = CEDAT_Student("John Doe", "CEDAT123", "REG/CEDAT/001", "ID/CEDAT/001")
+cocis_student = COCIS_Student("Jane Smith", "COCIS456", "REG/COCIS/001", "ID/COCIS/001")
+educ_student = EDUC_Student("Alice Johnson", "EDUC789", "REG/EDUC/001", "ID/EDUC/001")
+
+# Total number of students in the system
+total_students = 3
