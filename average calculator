@@ -1,0 +1,35 @@
+def calculate_grade(score):
+    """Calculate the grade based on the given score."""
+    if score >= 85:
+        return 'A+'
+    elif score >= 80:
+        return 'A'
+    elif score >= 75:
+        return 'B+'
+    elif score >= 70:
+        return 'B'
+    elif score >= 60:
+        return 'C'
+    elif score >= 55:
+        return 'D'
+    elif score >= 50:
+        return 'E'
+    else:
+        return 'F'
+
+def main():
+    """Main function to input scores, calculate grades, and print the average."""
+    course_units = 4
+    total_score = 0
+
+    for i in range(course_units):
+        score = float(input(f"Enter score for course unit {i+1}: "))
+        grade = calculate_grade(score)
+        print(f"Grade for course unit {i+1}: {grade}")
+        total_score += score
+
+    average_score = total_score / course_units
+    print(f"Average score: {average_score}")
+
+if __name__ == "__main__":
+    main()
