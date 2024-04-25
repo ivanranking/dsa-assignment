@@ -1,0 +1,105 @@
+class MakerereStudent:
+    """
+    Base class for Makerere University students
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        self.full_name = full_name
+        self.reg_no = reg_no
+        self.student_no = student_no
+
+        #self.id_no = id_no
+
+
+class CEDATStudent(MakerereStudent):
+    """
+    Class for students in the College of Engineering, Design, Art and Technology (CEDAT)
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.college = "CEDAT"
+
+
+class COCISStudent(MakerereStudent):
+    """
+    Class for students in the College of Computing and Information Sciences (COCIS)
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.college = "COCIS"
+
+
+class EDUCStudent(MakerereStudent):
+    """
+    Class for students in the School of Education (EDUC)
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.college = "EDUC"
+
+
+class EASLISStudent(COCISStudent):
+    """
+    Class for students in the East African School of Library and Information Science (EASLIS)
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.school = "EASLIS"
+
+
+class SCITStudent(COCISStudent):
+    """
+    Class for students in the School of Computing and Informatics Technology (SCIT)
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.school = "SCIT"
+
+
+class CSStudent(COCISStudent):
+    """
+    Class for students in the Computer Science department
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.department = "Computer Science"
+
+
+class SEStudent(COCISStudent):
+    """
+    Class for students in the Software Engineering department
+    """
+
+    def __init__(self, full_name, reg_no, student_no, id_no):
+        super().__init__(full_name, reg_no, student_no, id_no)
+        self.department = "Software Engineering"
+
+
+# Example usage
+student1 = CEDATStudent("John Doe", "CED123", "S123", "ID001")
+print(student1.full_name)
+print("University: Makerere")
+print("College: " + student1.college)
+print("Reg No: " + student1.reg_no)
+print("Student No: " + student1.student_no)
+print("id_no: "+student1.id_no)
+student2 = SEStudent("kayiwa john","2020/u/172","2020172")
+print(student1.full_name)
+print("University: Makerere")
+print("College: " + student2.college)
+print("Reg No: " + student2.reg_no)
+print("Student No: " + student2.student_no)
+print("id_no: "+student2.id_no)
+student3 = CSStudent("adongo diana","2020/U/1725","20201725")
+print(student3.full_name)
+print("University: Makerere")
+print("College: " + student3.college)
+print("Reg No: " + student3.reg_no)
+print("Student No: " + student3.student_no)
+print("id_no: "+student3.id_no) 
