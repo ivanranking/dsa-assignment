@@ -1,0 +1,16 @@
+name =input('enter the name\n')
+age =input('enter the age\n')
+
+if age <= '18':
+    print('you are stil young ' + name)
+else:
+    print('you are now an adult ' + name)
+school = input('enter the school\n')
+print('1= planned kids')
+print('2=planning kids' )  
+print("which school did you go to for plnned kids or planning kids\n")
+choice =input('enter your choice\n')
+if choice==1:
+    print('you are a planned kid '+ name)
+elif choice==2:
+    print('you are a planning kid ' + name)
