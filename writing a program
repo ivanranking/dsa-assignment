@@ -1,0 +1,19 @@
+def calculate_c(subjects):
+    total_credit_points = 0
+    total_credits = 0
+    for credit,grade in subjects:
+        credit_points= credit*grade
+        total_credit_points +=credit_points
+        total_credit_points +=credit
+        g =total_credit_points/total_credits
+        return g
+    def write_to_file(filename ,content):
+        with open(file_name,'r') as file:
+            for line in file:
+                credit,grade = map(float,line.strip().split())
+                subjects_data.append((credit,grade))
+                return subjects_data
+            G1 =calculate_c(subjects_data)
+            write_to_file('report.txt',f'calculated:{G1:2f}')
+            print('f write to report.txt successsfully')
+    
